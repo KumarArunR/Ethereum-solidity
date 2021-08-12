@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+body {
+	background: #2c3338;
+	color: #606468;
+	font: 87.5%/1.5em 'Open Sans', sans-serif;
+	margin: 0;
+}
+
+a {
+	color: #eee;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+input {
+	border: none;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+	padding: 0;
+	-webkit-appearance: none;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+.fieldset {
+	*zoom: 1;
+	border: none;
+}
+
+.fieldset:before, .fieldset:after {
+	display: table;
+	content: "";
+}
+
+.fieldset:after {
+	clear: both;
+}
+
+#login {
+	margin: 18% auto;
+	width: 280px;
+}
+
+#login .user{
+	background: url(../images/user.png) no-repeat;
+}
+
+#login  .cal{
+	background: url(../images/cal.png) no-repeat;
+}
+
+#login  .card{
+	background: url(../images/card.png) no-repeat;
+}
+
+#login  .pd1{
+	background: url(../images/ps.png) no-repeat;
+}
+
+#login  .pd2{
+	background: url(../images/mbl.png) no-repeat;
+}
+
+#login  span {
+	background-color: #363b41;
+	border-radius: 3px 0px 0px 3px;
+	color: #606468;
+	display: block;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	width: 50px;
+}
+
+#login  input {
+	height: 50px;
+}
+
+#login  input[type="text"], input[type="password"] {
+	color: #052E59;
+	font-size: 16px;
+	background-color: #E2E5D5;
+	border-radius: 0px 3px 3px 0px;
+	margin-bottom: 1em;
+	padding: 0 16px;
+	width: 198px;
+}
+
+input:-webkit-autofill{
+	background-color: red;
+}
+
+#login  input[type="button"] {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #ea4c88;
+	color: #eee;
+	font-weight: bold;
+	margin-bottom: 2em;
+	text-transform: uppercase;
+	width: 280px;
+}
+
+
+#login  input[type="button"]:hover {
+	background-color: #d44179;
+}
+
+#login>p {
+	text-align: center;
+}
+
+#login>p span {
+	padding-left: 5px;
+}
+
+/* code starts here */
+.background-image {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	display: block;
+	/* background-color:#B6C9D7; */
+	background: url(../images/lock.jpg) no-repeat;
+	background-size: cover;
+	-webkit-filter: blur(7px);
+	-moz-filter: blur(7px);
+	-o-filter: blur(7px);
+	-ms-filter: blur(7px);
+	filter: blur(7px);
+}
+
+::-webkit-input-placeholder {
+	color: #86897A;
+}
+
+#footer_wrapper {
+	position: fixed;
+	bottom: 0;
+}

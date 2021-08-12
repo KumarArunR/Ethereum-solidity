@@ -1,0 +1,195 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js"></script>
+
+        <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <link href="css/home.css" rel="stylesheet" type="text/css" />
+
+        <script src="jquery/jquery.min.js"></script>
+        <script src="jquery/jquery-1.11.0.js"></script>
+        <script src="jquery/jquery-ui-1.10.4.js"></script>
+
+        <script src="jquery/jquery-ui-1.10.4.js"></script>
+        <link rel="stylesheet" href="css/jquery-ui-1.10.4.css" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <link
+            rel="stylesheet"
+            href="assets/vendors/mdi/css/materialdesignicons.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="assets/vendors/css/vendor.bundle.base.css"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+
+        <style>
+            ul li {
+                cursor: pointer;
+            }
+            .navbar {
+                overflow: hidden;
+                background-color: #19446a;
+                color: white;
+                z-index: 9999;
+            }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover,
+            .dropdown:hover .dropbtn {
+                background-color: #a1acbd;
+                cursor: pointer;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: fixed;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block !important;
+            }
+
+            #mybox {
+                width: 520px;
+                padding: 10px;
+                border: 5px solid gray;
+                margin-top: 110px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #tbl {
+                margin-top: 110px;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="js/abi.js"></script>
+        <script src="js/mainVal.js"></script> 
+        <script src="js/students.js"></script> 
+
+        <link href="css/home.css" rel="stylesheet" type="text/css" />
+        <div id="header_wrapper" style="z-index: 1">
+            <span style="margin: 10px 0 0 0">
+                <img
+                    class="univlogo"
+                    src="images/univlogo.png"
+                    width="70px"
+                    height="70px"
+                /><br />
+                <span class="univname">AU</span>
+            </span>
+
+            <div
+                id="header"
+                style="margin: -80px 0 0 0; color: white"
+                align="center"
+            >
+                <!-- <div id="site_logo" style="margin: 0 0 0 0;"></div> -->
+                <span style="font-size: 22px">Knowledge Data Centre - AU-Payment Gateway(AUPaG) </span>
+                <br /><br />
+                <br />
+                <!-- <span style="margin: 5px 0 0 0"></span>  -->
+            </div>
+
+            <div id="menu">
+                <div id="menu_left"></div>
+                <!-- start -->
+                <div class="navbar">
+                    <a id="StudentDetail">Student Details</a>
+                    <a id="StudentEnroll">Student Enrollment</a>
+                    <a id="logout">Log out</a>
+                </div>
+                <!-- end  -->
+            </div>
+
+            <script type="text/javascript">
+                $("#logout").click(function () {
+                    window.location.href = "admin.html";
+                });
+
+                $("#StudentDetail").click(function () {
+                    window.location.href = "StudDetails.html";
+                });
+
+                $("#StudentEnroll").click(function () {
+                    window.location.href = "StudEnroll.html";
+                });
+            </script>
+        </div>
+        <div
+            class="row justify-content-center"
+            id="tbl"
+            style="overflow: hidden"
+        >
+            <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Reg No.</th>
+                                    <th>Degree</th>
+                                    <th>Sem</th>
+                                    <th>Fees</th>
+                                </tr>
+                            </thead>
+                            <tbody id='tabBody'>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+        <script src="assets/js/off-canvas.js"></script>
+        <script src="assets/js/hoverable-collapse.js"></script>
+        <script src="assets/js/misc.js"></script>   -->
+    </body>
+</html>

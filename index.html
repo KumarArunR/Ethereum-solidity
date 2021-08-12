@@ -1,0 +1,241 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Student Portal</title>
+
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/home.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/jquery-ui-1.10.4.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="jquery/jquery.min.js"></script>
+<script src="jquery/jquery-1.11.0.js"></script>
+<script src="jquery/jquery-ui-1.10.4.js"></script>
+<script type="text/javascript" src="jquery/jquery.validate.min.js"></script>
+
+<style type="text/css">
+table td {
+	padding: 8px 8px;
+}
+
+#agreementForm label.error {
+	font-size: 16px;
+	display: inline-block;
+	color: #ff0000;
+}
+
+p {
+	margin-top: 5px;
+}
+
+.ui-accordion .ui-accordion-header {
+	font-size: 100%;
+}
+
+.ui-helper-reset {
+	font-size: 100%;
+}
+
+li {
+	padding: 6px 0;
+}
+ul
+{
+list-style-type: none;
+}
+</style>
+
+<script>
+	$(function() {
+		$("#accordion").accordion({
+			heightStyle : "content",
+			header : "h3",
+			collapsible : true,
+			autoHeight : false,
+			navigation : true
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	(function($, W, D) {
+		var JQUERY4U = {};
+
+		JQUERY4U.UTIL = {
+			setupFormValidation : function() {
+				//form validation rules
+				$("#agreementForm").validate({
+					rules : {
+
+						capval1 : {
+							required : true,
+						}
+
+					},
+					messages : {
+
+						capval1 : {
+							required : "Solve this",
+						}
+
+					},
+					submitHandler : function(form) {
+						form.submit();
+					}
+				});
+			}
+		};
+		$(D).ready(function($) {
+			JQUERY4U.UTIL.setupFormValidation();
+		});
+
+	})(jQuery, window, document);
+</script>
+
+</head>
+<body>
+
+	<!-- <div class="background-image"></div> -->
+
+	
+<link href="css/home.css" rel="stylesheet" type="text/css" />
+
+<div id="header_wrapper" style="z-index: 10">
+
+	<span style="margin: 10px 0 0 0;"> <img class="univlogo"
+		src="images/univlogo.png" width="60px" height="60px" /><br /> <span
+		class="univname">AU</span>
+	</span>
+
+	<div id="header" style="margin: -57px 0 0 0;color: white;" align="center">
+		<!-- <div id="site_logo" style="margin: 0 0 0 0;"></div> -->
+		<span style="font-size: 25px;">Knowledge Data Centre</span><br /><br />	
+		<span style="font-size: 18px; margin: 5px 0 0 0">Student Portal</span>	
+	</div>
+
+	<div style="float: right; margin: -79px 50px 0 0;" align="center">
+		<img class="" src="images/kdclogo.png" width="90px" height="65px" /><br />
+		<span style="margin: 0 0 0 0;" class="univname">KDC</span>
+	</div>
+</div>
+
+
+	<div align="center" id="contentDiv"
+		style="margin: 110px 0 0 0;">
+
+		<div style="width: 72%;margin-bottom: 20px;" align="left">
+
+			<form action="login.html" method="get" id="agreementForm">
+	<div id="error" style="color: #ff0000" align="center"><h3></h3></div>
+				<div id="accordion">
+					<h3>Announcements</h3>
+					<div>
+						<p>
+						<ul>
+							<li style="color:red;">Students are advised to confirm their Failed Transaction STATUS before making any second time payments</li>
+							<!--  <li style="color:red;">Only for University Department (CEG,ACT,MIT,SAP)</li>-->
+							<li>Verify your register number in this portal before
+								proceeding to bank portal</li>
+							<li>Verify your register number in the <b>Bank's portal</b>
+								before making payment
+							</li>
+						</ul>
+						</p>
+					</div>
+					<h3>How-To Instructions</h3>
+					<div>
+						<p>
+						<ol style="text-align: left;">
+							<li>Login with your register number and date of birth using
+								Chrome/Firefox</li>
+							<li><b>Verify the displayed details and proceed to
+									choose between two categories for making payment</b></li>
+							<li><b>First Category uses Integrated ZERO transaction charges Net Banking
+									facility with IOB/SBI </b></li>
+							<ul>
+								<li style="padding: 6px 12px;">Choose this option if you
+									have accounts with Net Banking facility with IOB/SBI</li>
+								<li style="padding: 6px 12px;">Choosing a bank under this
+									category will redirect you to the respective bank's portal,
+									where you can make the payment</li>
+								<li style="padding: 6px 12px;">On successful completion of
+									the payment, you will be redirected to the login page again</li>
+								<li style="padding: 6px 12px;">Temporary receipt for payment will
+									be available in the student login after successful payment</li>
+								<li style="padding: 6px 12px;">Digitally Signed receipt for payment will
+									be available within 48 working hours for successful payment in Student's Login</li>
+							</ul>
+							<li><b>Second category uses SBI Multi-Option Payment (MOP) facility</b></li>
+							<ul>
+								<li style="padding: 6px 12px;">Choose this option for
+									making payment using Net Banking with any other banks or to
+									make payment using Debit/Credit cards</li>
+								<li style="padding: 6px 12px;">Choosing this option will
+									redirect you to SBI MOP portal</li>								
+								<li style="padding: 6px 12px;">Choose your preferred option
+									of payment and follow the instructions for payment</li>
+								<li style="padding: 6px 12px;">On successful transaction, a temporary
+									bank receipt with reference number will be issued</li>
+								<li style="padding: 6px 12px;">Digitally Signed receipt for payment will
+									be available within 48 working hours for successful payment in Student's Login</li>
+								<li style="padding: 6px 12px;">Check Transaction and Service charges as
+									applicable for each transaction before making payment</li>
+							</ul>
+							<li><b>Note down the transaction reference number and
+									bank transaction reference number for further reference</b></li>
+						</ol>
+						</p>
+					</div>
+
+					<h3>Contact</h3>
+					<div>
+						<p>
+						<ul>
+							<li style="font-weight:bold;color:#FE5214">For Bank Transaction Related Queries Contact</li>
+							<li>Knowledge Data Centre</li>
+							<li>Anna University,</li>
+							<li>Chennai 25</li>
+							<li>Off: 044 2235 7092</li>
+
+							<li>On all Working Days between 10:00 to 18:00 hrs</li>
+							</p>
+						</ul>
+
+					</div>
+				</div>
+
+				<div align="center" style="margin: 20px 0 0 0">
+
+					<h1>97 - 7 = </h1><br /> 
+					<input type="text" name="capval1" placeholder="Solve this" tabindex="1" style="height: 30px;" /><br /> 
+					
+					<input type="button" value="I Agree" class="newbtn" id="forward" style="margin: 20px 0 0 0" />
+				</div>
+
+			</form>
+		</div>
+
+		<!-- <div id="footer_wrapper">
+
+			<div id="footer">
+
+				Copyright © 2014 <a href="#">Knowledge Data Centre</a> | <a
+					href="http://www.aukdc.edu.in" target="_parent">KDC</a>
+				<div class="cleaner"></div>
+			</div>
+		</div> -->
+
+	</div>
+
+	<script type="text/javascript">
+		$('#forward').click(function() {
+			$("#agreementForm").submit();
+		});
+	</script>
+</html>

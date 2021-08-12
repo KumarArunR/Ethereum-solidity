@@ -1,0 +1,267 @@
+{
+	"compiler": {
+		"version": "0.8.1+commit.df193b15"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "pwd",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "id",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "password",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "password",
+						"type": "string"
+					}
+				],
+				"name": "adminLogin",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "id",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "regno",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "degree",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sem",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "passcode",
+						"type": "string"
+					}
+				],
+				"name": "enrollStudent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "regno",
+						"type": "uint256"
+					}
+				],
+				"name": "paidFee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "regno",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "id",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "passcode",
+						"type": "string"
+					}
+				],
+				"name": "payFee",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "student",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "id",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "regno",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "degree",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sem",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "paid",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "passcode",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "regno",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "password",
+						"type": "string"
+					}
+				],
+				"name": "studentLogin",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Fee.sol": "Fee"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Fee.sol": {
+			"keccak256": "0x4a4c7f82e6f8519f69301f622f36f7c9ab28f341b1bf33feb750edce677c23b1",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://d49dd0961fdc8d8c73ebda2ad2e1178bd58efbb27aacd2ff1a2066acf7bc139e",
+				"dweb:/ipfs/QmfV2YdRntZjmHCwJ1H7ogthbAx5LgTHrLZhzFeRbGAf3Y"
+			]
+		}
+	},
+	"version": 1
+}
